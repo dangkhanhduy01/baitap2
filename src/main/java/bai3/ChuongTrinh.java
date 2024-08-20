@@ -38,7 +38,7 @@ public class ChuongTrinh {
                     xoa();
                     break;
                 case 4:
-              
+              xuatgiaTB();
                     break;
                 case 0:
                     System.out.println("chuong trinh ket thuc.");
@@ -97,5 +97,19 @@ public class ChuongTrinh {
         if (!timThay) {
             System.out.println("khong tim thay san pham theo ten: " + ten);
         }
+    }
+     private static void xuatgiaTB() {
+        if (ds.isEmpty()) {
+            System.out.println("Danh sach san pham trong.");
+            return;
+        }
+        
+        double tongGia = 0;
+        for (SanPham sp : ds) {
+            tongGia += sp.getGia();
+        }
+        
+        double giaTrungBinh = tongGia / ds.size();
+        System.out.println("Gia trung binh cua cac san pham la: " + giaTrungBinh);
     }
 }
