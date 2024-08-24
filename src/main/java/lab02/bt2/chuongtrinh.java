@@ -6,26 +6,36 @@ package lab02.bt2;
 
 
 
+
 import java.util.Scanner;
 
 public class chuongtrinh {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-      
+       
         System.out.print("Nhap ban kinh hinh tron: ");
-        double bankinh = scanner.nextDouble();
+        double banKinhHinhTron = scanner.nextDouble();
+        HinhTron hinhTron = new HinhTron(banKinhHinhTron);
 
-     
-        HinhTron ht = new HinhTron(bankinh);
-        ht.xuat();
+        
+        System.out.println("Thong tin hinh tron:");
+        System.out.println("Ban kinh: " + hinhTron.getBanKinh());
+        System.out.println("Dien tich: " + hinhTron.tinhDienTich());
+        System.out.println("Chu vi: " + hinhTron.tinhChuVi());
 
-    
+        
+        System.out.print("Nhap ban kinh hinh tru: ");
+        double banKinhHinhTru = scanner.nextDouble();
         System.out.print("Nhap chieu cao hinh tru: ");
-        double chieucao = scanner.nextDouble();
+        double chieuCaoHinhTru = scanner.nextDouble();
+        HinhTru hinhTru = new HinhTru(banKinhHinhTru, chieuCaoHinhTru);
 
-      
-        HinhTru htru = new HinhTru(bankinh, chieucao);
-        htru.xuat();
+       
+        System.out.println("Thong tin hinh tru:");
+        System.out.println("Ban kinh: " + hinhTru.getBanKinh());
+        System.out.println("Chieu cao: " + hinhTru.getChieuCao());
+        System.out.println("Dien tich toan phan: " + hinhTru.tinhDienTich());
+        System.out.println("The tich: " + hinhTru.tinhTheTich());
     }
 }

@@ -12,13 +12,11 @@ public class SinhVienBiz extends SinhVien {
     private double diemMarketing;
     private double diemSales;
 
-    
     public SinhVienBiz(String hoTen, double diemMarketing, double diemSales) {
         super(hoTen, "Biz");
         this.diemMarketing = diemMarketing;
         this.diemSales = diemSales;
     }
-
 
     @Override
     public double getDiem() {

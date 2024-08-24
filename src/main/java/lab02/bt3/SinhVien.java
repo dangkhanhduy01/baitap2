@@ -12,7 +12,6 @@ public abstract class SinhVien {
     protected String hoTen;
     protected String nganh;
 
-  
     public SinhVien(String hoTen, String nganh) {
         this.hoTen = hoTen;
         this.nganh = nganh;
@@ -20,7 +19,6 @@ public abstract class SinhVien {
 
     public abstract double getDiem();
 
-   
     public String getHocLuc() {
         double diem = getDiem();
         if (diem >= 9) {
@@ -36,7 +34,6 @@ public abstract class SinhVien {
         }
     }
 
- 
     public void xuat() {
         System.out.println("Ho ten: " + hoTen);
         System.out.println("Nganh: " + nganh);

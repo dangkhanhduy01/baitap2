@@ -14,7 +14,6 @@ public class SinhVienIT extends SinhVien {
     private double diemHtml;
     private double diemCss;
 
-  
     public SinhVienIT(String hoTen, double diemJava, double diemHtml, double diemCss) {
         super(hoTen, "IT");
         this.diemJava = diemJava;
@@ -22,7 +21,6 @@ public class SinhVienIT extends SinhVien {
         this.diemCss = diemCss;
     }
 
-   
     @Override
     public double getDiem() {
         return (2 * diemJava + diemHtml + diemCss) / 4;

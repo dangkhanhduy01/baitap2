@@ -7,37 +7,35 @@ package lab02.bt2;
 
 
 public class HinhTron {
-    private double bankinh;
+    protected double banKinh;
 
-    
-    public HinhTron(double bankinh) {
-        this.bankinh = bankinh;
+
+    public HinhTron() {
+        this.banKinh = 0;
     }
 
 
-    public double getBankinh() {
-        return bankinh;
+    public HinhTron(double banKinh) {
+        this.banKinh = banKinh;
+    }
+
+
+    public void setBanKinh(double banKinh) {
+        this.banKinh = banKinh;
+    }
+
+ 
+    public double getBanKinh() {
+        return this.banKinh;
     }
 
    
-    public void setBankinh(double bankinh) {
-        this.bankinh = bankinh;
-    }
-
- 
     public double tinhDienTich() {
-        return Math.PI * bankinh * bankinh;
+        return Math.PI * this.banKinh * this.banKinh;
     }
 
-  
+
     public double tinhChuVi() {
-        return 2 * Math.PI * bankinh;
-    }
-
- 
-    public void xuat() {
-        System.out.println("Hinh tron co ban kinh: " + bankinh + 
-                           ", dien tich: " + tinhDienTich() +
-                           ", chu vi: " + tinhChuVi());
+        return 2 * Math.PI * this.banKinh;
     }
 }
